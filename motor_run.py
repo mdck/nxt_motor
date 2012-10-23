@@ -19,14 +19,17 @@ m_right = Motor(b, PORT_C)
 vehicle = SynchronizedMotors(m_left, m_right, 0)
 
 running = False
+UP_key = False
 
 while True: 
    key = screen.getch() 
    if key == ord("q"): break 
-   elif key == curses.KEY_UP and running == False: 
+   elif key == curses.KEY_UP and running == False and UP_key == False: 
       vehicle.run() 
       running = True
-   elif key == curses.KEY_UP and running == True: 
+      UP_key = True
+   elif key == curses.KEY_UP and running == True and UP_key == True: 
       vehicle.idle()
       running = False
+      UP_key = False
 
