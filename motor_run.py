@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python 
 # -*- coding: utf-8 -*- 
 
@@ -32,4 +31,4 @@ while True:
       vehicle.idle()
       running = False
       UP_key = False
-
+curses.endwin()
