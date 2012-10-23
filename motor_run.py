@@ -27,7 +27,7 @@ while True:
       vehicle.run()
       is_running = True
       
-   elif key == curses.KEY_UP and is_running == False:
+   elif key == curses.KEY_UP and is_running == True:
       vehicle.idle()
       is_running = False
    
