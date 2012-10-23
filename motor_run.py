@@ -22,13 +22,17 @@ UP_key = False
 
 while True: 
    key = screen.getch() 
-   if key == ord("q"): break 
-   elif key == curses.KEY_UP and running == False and UP_key == False: 
+   if key == curses.KEY_UP and running == False
       vehicle.run() 
       running = True
-      UP_key = True
-   elif key == curses.KEY_UP and running == True and UP_key == True: 
+   elif key == -1
       vehicle.idle()
       running = False
+
       UP_key = False
+curses.endwin()
+
+  #elif key == curses.KEY_UP and running == True: 
+   elif key == ord("q"): break 
+      
 curses.endwin()
